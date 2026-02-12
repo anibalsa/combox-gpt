@@ -1,0 +1,190 @@
+:root {
+    --fontBarlow: 'Barlow', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+
+    --fontIntelligence: 'BarlowIntelligence',
+        system-ui,
+        Avenir,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    --fontCondensed: 'BarlowIntelligenceCondensed',
+        system-ui,
+        Avenir,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color-scheme: light dark;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    /* Tons Escuros / Primários */
+    --color-black: #0D1117;
+    --color-semi-black: #141B25;
+    --color-carvao: #1B2433;
+    --color-gray-blue: #29364E;
+    --color-gray-overlay: #29364eab;
+    --color-gray: #3F495B;
+    --color-dark-blue: #2C497F;
+    --color-blue: #5381d1;
+    --color-light-blue: #6096f4;
+    /* Referência lateral na paleta */
+
+    /* Tons de Cinza / Neutros */
+    --color-silver: #555B67;
+    --color-offwhite: #FAF9F6;
+
+    --color-gray: #8A9597;
+
+    --color-laranja-dark: #964B00;
+    --color-laranja: #F27A00;
+    --color-laranja-light: #FF8000;
+    --color-laranja-overlay: #ff8000c4;
+    --color-glass-laraja: linear-gradient(to bottom,
+            var(--color-laranja-overlay) 0%,
+            transparent 100%);
+
+    --color-vermelho: #CE2029;
+    --color-vermelho-dark: #B23615;
+    --color-vermelho-overlay: #ce2029b3;
+    /* Tom terroso/avermelhado */
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --padding: 5vh 5vw;
+    --max-width: calc(100% - 10vw);
+    --header-height: 100px;
+
+    --gap: 5vw;
+    --gap-v: 5vh;
+
+    --mod: 13.3333vw;
+    --mod-v: 13.3333vh;
+    --transition-fast: 150ms ease;
+    --transition-medium: 300ms ease;
+    --border-radius: 8px;
+    --shadow: 0 20px 40px -10px rgba(27, 36, 51, 0.8);
+    --shadowInset: inset 0 -20px 40px -10px rgba(27, 36, 51, 0.6);
+    --shadowInverse: 0 -20px 40px -10px rgba(27, 36, 51, 0.6);
+    --shadowInsetInverse: inset 0 -20px 40px -10px rgba(27, 36, 51, 0.6);
+    --shadow-blue: 0 20px 40px -10px #6096f4;
+    --shadow-laranja: 0 20px 40px -10px #ff8000c4;
+    --shadow-laranjaInverse: 0 -20px 40px -10px #ff8000c4;
+    --shadow-black: 0 -10px 20px 15px #1B2433;
+    --shadow-text: 0 0 8px rgba(53, 132, 174, 0.4);
+    --shadow-text-blue: 1px 1px 1px #6096f4;
+    --shadow-text-light: 0 0 3px rgba(9, 60, 88, 0.4);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bg-dark-01 {
+    background-color: var(--color-1-hex);
+}
+
+.bg-dark-02 {
+    background-color: var(--color-2-hex);
+}
+
+.bg-dark-03 {
+    background-color: var(--color-3-hex);
+}
+
+.bg-orange-main {
+    background-color: var(--color-10-hex);
+}
+
+.bg-neutral-light {
+    background-color: var(--color-7-hex);
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-cta-large {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-family: 'BarlowIntelligenceCondensed', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #333;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background: #000;
+    color: #fff;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-primary, #ff8c00);
+    /* Use sua cor laranja Combox */
+    color: #fff;
+    border-radius: 12px;
+    /* Visual moderninho, não totalmente circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    /* Cor de destaque ao passar o mouse */
+    transform: translateY(-5px);
+}
+
+.back-to-top:hover svg {
+    transform: translateY(-2px);
+}

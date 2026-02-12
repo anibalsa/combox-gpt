@@ -1,0 +1,212 @@
+.site-header {
+  position: relative;
+  width: 100%;
+  z-index: 10000;
+  background-color: var(--color-carvao);
+  padding: 0 var(--gap);
+}
+
+.site-header .wrapper {
+  height: var(--header-height);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-offwhite);
+  transition: transform var(--transition-fast)
+}
+
+.logo {
+  transition: all 1s ease;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  transition: all 1s ease;
+}
+
+.logo a svg {
+  width: 180px;
+  height: auto;
+  min-height: 44px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  fill: var(--color-gray);
+  filter: var(--filter-shadow-light);
+}
+
+.logo a:hover svg {
+  fill: var(--color-silver);
+}
+
+.scrolled {
+  background: rgba(35, 35, 48, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* Navegação sempre via drawer; sem menu inline */
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 232, 232, 0.12);
+  background: rgba(232, 232, 232, 0.06);
+  color: var(--cbx-text);
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.menuButton:active {
+  transform: scale(0.98);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Largura total para abrir de cima */
+  height: auto;
+  /* Altura automática baseada no conteúdo */
+  min-height: 300px;
+  /* Ou 100vh se quiser que cubra a tela toda */
+  background-color: var(--color-carvao);
+  z-index: 20000;
+  padding: 80px 24px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid var(--cbx-blue-2);
+
+  /* Mágica do deslize: começa -100% (acima da tela) */
+  transform: translateY(-110%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Quando aberto, volta para a posição original */
+.drawer.is-open {
+  transform: translateY(0) !important;
+}
+
+/* O botão de fechar dentro do drawer */
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.drawerLinks {
+  display: grid;
+  gap: 8px;
+}
+
+.drawerLinks a {
+  color: var(--color-offwhite);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 14px 12px;
+  border-radius: 10px;
+  background: rgba(232, 232, 232, 0.06);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.drawerLinks a.active {
+  background: rgba(194, 102, 23, 0.18);
+  color: #ffffff;
+}
+
+.drawerCtas {
+  display: grid;
+  gap: 8px;
+}
+
+/* Botões coloridos de páginas */
+.ctaPro {
+  background: var(--cbx-blue-2) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 16px rgba(53, 132, 174, 0.35);
+}
+
+.ctaPro:hover {
+  background: #2b7297 !important;
+}
+
+.ctaCare {
+  background: var(--cbx-green) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 16px rgba(76, 148, 124, 0.35);
+}
+
+.ctaCare:hover {
+  background: #3e826a !important;
+}
+
+@media (min-width: 768px) {
+  .logo a svg {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo a svg {
+    width: 220px;
+    min-height: 54px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo a svg {
+    width: 240px;
+    min-height: 58px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo a svg {
+    width: 260px;
+    min-height: 65px;
+  }
+}

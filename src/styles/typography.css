@@ -1,0 +1,62 @@
+/* ==========================
+   BarlowIntelligence
+   ========================== */
+
+/* Thin */
+@font-face {
+    font-family: "BarlowIntelligence";
+    src: url("../assets/fonts/BarlowIntelligence-Thin.woff2") format("woff2");
+    font-weight: 250;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: "BarlowIntelligence";
+    src: url("../assets/fonts/BarlowIntelligence-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: "BarlowIntelligence";
+    src: url("../assets/fonts/BarlowIntelligence-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==========================
+   BarlowIntelligenceCondensed
+   ========================== */
+
+/* Thin */
+@font-face {
+    font-family: "BarlowIntelligenceCondensed";
+    src: url("../assets/fonts/BarlowIntelligenceCondensed-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: "BarlowIntelligenceCondensed";
+    src: url("../assets/fonts/BarlowIntelligenceCondensed-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: "BarlowIntelligenceCondensed";
+    src: url("../assets/fonts/BarlowIntelligenceCondensed-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

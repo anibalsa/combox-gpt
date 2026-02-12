@@ -1,0 +1,96 @@
+/* normalize.css (moderno e enxuto) */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens padrão */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove lista padrão */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set height 100% */
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Aumenta acessibilidade nos links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imagens responsivas por padrão */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fonte herdada nos inputs */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header,
+main,
+section,
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove animações e transições para quem prefere sem */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Adicione ao final do seu arquivo ou na seção de Reset */
+body,
+[data-scroll-container] {
+  overscroll-behavior-y: none;
+  /* Evita o efeito 'bounce' que trava o Locomotive */
+  touch-action: pan-y;
+  /* Garante que o toque vertical sempre resulte em scroll */
+}

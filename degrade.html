@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Degradê Interativo com CSS</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: system-ui, sans-serif;
+        }
+
+        /* O Container Principal */
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* O Degradê que segue o mouse */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            /* Usamos as variáveis --x e --y que o JS irá atualizar */
+            background: radial-gradient(
+                800px circle at var(--x, 50%) var(--y, 50%), 
+                rgba(255, 255, 255, 0.06),
+                transparent 40%
+            );
+            z-index: 1;
+        }
+
+        .card h2 {
+            color: white;
+            z-index: 2;
+            pointer-events: none; /* Garante que o texto não bloqueie o mouse */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Passe o mouse</h2>
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+
+        card.addEventListener('mousemove', (e) => {
+            // Pegamos a posição do card na tela
+            const rect = card.getBoundingClientRect();
+            
+            // Calculamos a posição do mouse relativa ao card
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Injetamos os valores nas variáveis CSS do elemento
+            card.style.setProperty('--x', `${x}px`);
+            card.style.setProperty('--y', `${y}px`);
+        });
+    </script>
+
+</body>
+</html>

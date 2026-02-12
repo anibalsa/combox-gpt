@@ -1,0 +1,264 @@
+<div class="acessibilidade-lateral">
+      <div class="btn-access-wrapper legibilidade">
+        <!-- Botão de acessibilidade visual geral -->
+        <button
+          id="acess-visual"
+          class="btn-access visual"
+          aria-label="Ajustar acessibilidade visual"
+        >
+          <img src="/assets/icons/icon-acessibilidade-visual.svg" alt="Acessibilida visual" />
+        </button>
+        <div class="wrapper-modal">
+          <div class="modal-access" hidden>
+            <div class="close-modal fechar-voz">
+              <p>Acessibilidade visual</p>
+              <button
+                id="acess-close"
+                class="btn-access btn-close btn-close-modal"
+                aria-label="Fechar ajustes de legibilidade"
+              >
+                ✕<span class="tooltip">Fechar painel</span>
+              </button>
+            </div>
+
+            <!-- Botão de fechar painel -->
+            <div class="controles">
+              <!-- Controle de fontes -->
+              <button
+                id="acess-font-up"
+                class="btn-access"
+                aria-label="Aumentar fonte"
+              >
+                <img src="/assets/icons/icon-access-font-up.svg" alt="Aumentar a fonte" /><span
+                  class="tooltip left"
+                  >Aumentar fonte</span
+                >
+              </button>
+              <button
+                id="acess-font-down"
+                class="btn-access"
+                aria-label="Diminuir fonte"
+              >
+                <img src="/assets/icons/icon-access-font-down.svg" alt="Diminuir a fonte" /><span
+                  class="tooltip left"
+                  >Diminuir fonte</span
+                >
+              </button>
+
+              <!-- Contraste -->
+              <button
+                id="acess-contraste"
+                class="btn-access"
+                aria-label="Alternar alto contraste"
+              >
+                <img src="/assets/icons/icon-access-contraste.svg" alt="Alto contraste" /><span
+                  class="tooltip left"
+                  >Alto contraste</span
+                >
+              </button>
+
+              <!-- Fonte sem serifa -->
+              <button
+                id="acess-sans"
+                class="btn-access"
+                aria-label="Fonte sem serifa"
+              >
+                <img src="/assets/icons/icon-access-font-sans.svg" alt="Fonte sem serifa" /><span
+                  class="tooltip left"
+                  >Fonte sem serifa</span
+                >
+              </button>
+
+              <!-- Entrelinhamento -->
+              <button
+                id="acess-espacamento"
+                class="btn-access"
+                aria-label="Aumentar espaçamento (line-height)"
+              >
+                <img src="/assets/icons/icon-access-entrelinhas.svg" alt="Aumentar espaçamento entre linhas" /><span
+                  class="tooltip left"
+                  >Aumentar espaçamento entre linhas</span
+                >
+              </button>
+
+              <!-- Entreletra -->
+              <button
+                id="acess-letra"
+                class="btn-access"
+                aria-label="Aumentar espaçamento entre letras"
+              >
+                <img src="/assets/icons/icon-access-entreletras.svg" alt="Aumentar espaçamento entre letras" /><span
+                  class="tooltip left"
+                  >Aumentar espaçamento entre letras</span
+                >
+              </button>
+
+              <!-- Inverter cores -->
+              <button
+                id="acess-inverter"
+                class="btn-access"
+                aria-label="Inverter cores"
+              >
+                <img src="/assets/icons/icon-access-inverter-cores.svg" alt="Inverter cores" /><span
+                  class="tooltip left"
+                  >Inverter cores</span
+                >
+              </button>
+
+              <!-- Destacar links -->
+              <button
+                id="acess-links"
+                class="btn-access"
+                aria-label="Destacar links"
+              >
+                <img src="/assets/icons/icon-access-links.svg" alt="Destacar links" /><span
+                  class="tooltip left"
+                  >Destacar links</span
+                >
+              </button>
+
+              <!-- Tamanho dos botões -->
+              <button
+                id="acess-botoes"
+                class="btn-access"
+                aria-label="Aumentar tamanho dos botões"
+              >
+                <img src="/assets/icons/icon-access-button-up.svg" alt="Aumentar tamanho dos botões" /><span
+                  class="tooltip left"
+                  >Aumentar botões</span
+                >
+              </button>
+
+              <!-- Reset -->
+              <button
+                id="acess-reset"
+                class="btn-access"
+                aria-label="Resetar ajustes"
+                title="Resetar ajustes"
+              >
+                <img src="/assets/icons/icon-access-reset.svg" alt="Resetar ajustes" /><span
+                  class="tooltip left"
+                  >Resetar ajustes</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-access-wrapper reader">
+        <button
+          id="access-voz"
+          class="btn-access voz"
+          aria-label="Ativar leitura por voz"
+        >
+          <img src="/assets/icons/icon-acessibilidade-voz.svg" alt="Ouvir conteúdo" />
+        </button>
+
+        <!-- Modal de escolha de modo -->
+        <div class="modal-access modal-escolha-modo" hidden>
+          <div class="wrapper-modal wrapper-modal-reader">
+            <div class="close-modal fechar-voz">
+              <p>Acessibilidade de leitura</p>
+              <button
+                id="modal-fechar"
+                class="btn-access btn-close-modal fechar voz"
+                aria-label="Fechar modal"
+              >
+                X
+              </button>
+            </div>
+
+            <div class="controles">
+              <button
+                id="access-voz-stop"
+                class="btn-access voz-stop"
+                aria-label="Parar leitura por voz"
+              >
+                <img src="/assets/icons/icon-access-stop.svg" alt="Parar leitura por voz" /><span
+                  class="tooltip left"
+                  >Para leitura</span
+                >
+              </button>
+              <button
+                id="access-voz-pausar"
+                class="btn-access pausar"
+                aria-label="Pausar leitura por voz"
+              >
+                <img src="/assets/icons/icon-access-pause.svg" alt="Pausar leitura por voz" /><span
+                  class="tooltip left"
+                  >Pausar leitura</span
+                >
+              </button>
+              <button
+                id="access-voz-avancar"
+                class="btn-access avancar"
+                aria-label="Avançar frase"
+              >
+                <img src="/assets/icons/icon-access-avancar.svg" alt="Avançar frase" /><span
+                  class="tooltip left"
+                  >Próxima leitura</span
+                >
+              </button>
+              <button
+                id="access-voz-voltar"
+                class="btn-access voltar"
+                aria-label="Voltar frase"
+              >
+                <img src="/assets/icons/icon-access-retroceder.svg" alt="Voltar frase" /><span
+                  class="tooltip left"
+                  >Leitura anterior</span
+                >
+              </button>
+              <button
+                id="access-voz-hover-toggle"
+                class="btn-access hover-toggle"
+                aria-label="Ativar/desativar leitura ao passar o mouse"
+              >
+                <img src="/assets/icons/icon-access-mouse.svg" alt="Ativar/desativar leitura ao passar o mouse" /><span
+                  class="tooltip left"
+                  >Usar o mouse para leitura</span
+                >
+              </button>
+              <button
+                id="access-reset-voz"
+                class="btn-access"
+                aria-label="Resetar ajustes"
+                title="Resetar ajustes"
+              >
+                <img src="/assets/icons/icon-access-reset.svg" alt="Resetar ajustes" /><span
+                  class="tooltip left"
+                  >Resetar ajustes</span
+                >
+              </button>
+            </div>
+            <div class="escolher-modo">
+              <p id="audio-explicacao">Escolha como deseja ouvir o conteúdo:</p>
+              <div class="wrapper-escolha-botoes">
+                <button id="modo-auto" class="btn-access">
+                  Ler automaticamente
+                </button>
+                <button id="modo-hover" class="btn-access">
+                  Ler usando o mouse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VLibras -->
+      <div class="btn-access-wrapper libras">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
